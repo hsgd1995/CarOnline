@@ -10,7 +10,7 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main); 
-		//测试git提交单个文件
+		//绗簩娆℃祴璇曞崟涓枃浠舵彁浜わ細淇敼缂栫爜鏍煎紡涓簎tf-8
 	}
 	
 	@Override
