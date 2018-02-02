@@ -52,27 +52,46 @@ public final class R {
         public static final int activity_vertical_margin=0x7f050001;
     }
     public static final class drawable {
-        public static final int car=0x7f020000;
-        public static final int ic_launcher=0x7f020001;
-        public static final int lbs_popup_bg=0x7f020002;
-        public static final int login_btn=0x7f020003;
-        public static final int login_et_bg=0x7f020004;
-        public static final int login_picture_bg=0x7f020005;
-        public static final int register_user_btn=0x7f020006;
-        public static final int semi_black=0x7f02000b;
-        public static final int welcome=0x7f020007;
-        public static final int welcome3=0x7f020008;
-        public static final int welcome4=0x7f020009;
-        public static final int welcome5=0x7f02000a;
+        public static final int bar_constact=0x7f020000;
+        public static final int bar_deynaimic=0x7f020001;
+        public static final int bar_news=0x7f020002;
+        public static final int bar_setting=0x7f020003;
+        public static final int car=0x7f020004;
+        public static final int ic_launcher=0x7f020005;
+        public static final int lbs_popup_bg=0x7f020006;
+        public static final int login_btn=0x7f020007;
+        public static final int login_et_bg=0x7f020008;
+        public static final int login_picture_bg=0x7f020009;
+        public static final int register_user_btn=0x7f02000a;
+        public static final int semi_black=0x7f020017;
+        public static final int skin_tab_icon_contact_normal=0x7f02000b;
+        public static final int skin_tab_icon_contact_selected=0x7f02000c;
+        public static final int skin_tab_icon_conversation_normal=0x7f02000d;
+        public static final int skin_tab_icon_conversation_selected=0x7f02000e;
+        public static final int skin_tab_icon_plugin_normal=0x7f02000f;
+        public static final int skin_tab_icon_plugin_selected=0x7f020010;
+        public static final int skin_tab_icon_setup_normal=0x7f020011;
+        public static final int skin_tab_icon_setup_selected=0x7f020012;
+        public static final int welcome=0x7f020013;
+        public static final int welcome3=0x7f020014;
+        public static final int welcome4=0x7f020015;
+        public static final int welcome5=0x7f020016;
     }
     public static final class id {
-        public static final int account=0x7f090003;
-        public static final int action_settings=0x7f090006;
-        public static final int ll_user_info=0x7f090002;
-        public static final int login=0x7f090005;
-        public static final int login_picture=0x7f090000;
-        public static final int password=0x7f090004;
-        public static final int rl_user=0x7f090001;
+        public static final int account=0x7f09000a;
+        public static final int action_settings=0x7f09000d;
+        public static final int buttom_bar_group=0x7f090000;
+        public static final int buttom_constact=0x7f090002;
+        public static final int buttom_deynaimic=0x7f090003;
+        public static final int buttom_news=0x7f090001;
+        public static final int buttom_setting=0x7f090004;
+        public static final int fl_content=0x7f090006;
+        public static final int line=0x7f090005;
+        public static final int ll_user_info=0x7f090009;
+        public static final int login=0x7f09000c;
+        public static final int login_picture=0x7f090007;
+        public static final int password=0x7f09000b;
+        public static final int rl_user=0x7f090008;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
@@ -123,5 +142,7 @@ public final class R {
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f070001;
+        public static final int ButtomBar=0x7f070002;
+        public static final int ButtomBarImgBtn=0x7f070003;
     }
 }
