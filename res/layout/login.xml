@@ -30,7 +30,7 @@
         android:background="@drawable/lbs_popup_bg"
         android:orientation="vertical">
         <EditText
-            android:id="@+id/account"
+            android:id="@+id/loginname"
             android:layout_height="50dp"
             android:layout_width="match_parent"
             android:padding="5dp"

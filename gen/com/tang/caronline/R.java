@@ -24,6 +24,7 @@ public final class R {
         public static final int gray=0x7f040013;
         public static final int gray_font=0x7f040004;
         public static final int grays=0x7f040003;
+        public static final int green=0x7f04001d;
         public static final int naming=0x7f040018;
         public static final int orange=0x7f040015;
         public static final int orange_yellow=0x7f04001a;
@@ -62,41 +63,45 @@ public final class R {
         public static final int login_btn=0x7f020007;
         public static final int login_et_bg=0x7f020008;
         public static final int login_picture_bg=0x7f020009;
-        public static final int register_user_btn=0x7f02000a;
-        public static final int semi_black=0x7f020017;
-        public static final int skin_tab_icon_contact_normal=0x7f02000b;
-        public static final int skin_tab_icon_contact_selected=0x7f02000c;
-        public static final int skin_tab_icon_conversation_normal=0x7f02000d;
-        public static final int skin_tab_icon_conversation_selected=0x7f02000e;
-        public static final int skin_tab_icon_plugin_normal=0x7f02000f;
-        public static final int skin_tab_icon_plugin_selected=0x7f020010;
-        public static final int skin_tab_icon_setup_normal=0x7f020011;
-        public static final int skin_tab_icon_setup_selected=0x7f020012;
-        public static final int welcome=0x7f020013;
-        public static final int welcome3=0x7f020014;
-        public static final int welcome4=0x7f020015;
-        public static final int welcome5=0x7f020016;
+        public static final int main_color_selector=0x7f02000a;
+        public static final int register_user_btn=0x7f02000b;
+        public static final int semi_black=0x7f020018;
+        public static final int skin_tab_icon_contact_normal=0x7f02000c;
+        public static final int skin_tab_icon_contact_selected=0x7f02000d;
+        public static final int skin_tab_icon_conversation_normal=0x7f02000e;
+        public static final int skin_tab_icon_conversation_selected=0x7f02000f;
+        public static final int skin_tab_icon_plugin_normal=0x7f020010;
+        public static final int skin_tab_icon_plugin_selected=0x7f020011;
+        public static final int skin_tab_icon_setup_normal=0x7f020012;
+        public static final int skin_tab_icon_setup_selected=0x7f020013;
+        public static final int welcome=0x7f020014;
+        public static final int welcome3=0x7f020015;
+        public static final int welcome4=0x7f020016;
+        public static final int welcome5=0x7f020017;
     }
     public static final class id {
-        public static final int account=0x7f09000a;
-        public static final int action_settings=0x7f09000d;
-        public static final int buttom_bar_group=0x7f090000;
-        public static final int buttom_constact=0x7f090002;
-        public static final int buttom_deynaimic=0x7f090003;
-        public static final int buttom_news=0x7f090001;
-        public static final int buttom_setting=0x7f090004;
-        public static final int fl_content=0x7f090006;
-        public static final int line=0x7f090005;
-        public static final int ll_user_info=0x7f090009;
-        public static final int login=0x7f09000c;
-        public static final int login_picture=0x7f090007;
-        public static final int password=0x7f09000b;
-        public static final int rl_user=0x7f090008;
+        public static final int action_settings=0x7f09000c;
+        public static final int car_control=0x7f090002;
+        public static final int car_setting=0x7f090003;
+        public static final int ll_user_info=0x7f090008;
+        public static final int login=0x7f09000b;
+        public static final int login_picture=0x7f090006;
+        public static final int loginname=0x7f090009;
+        public static final int my_setting=0x7f090005;
+        public static final int password=0x7f09000a;
+        public static final int radioGroup=0x7f090001;
+        public static final int rl_user=0x7f090007;
+        public static final int sys_setting=0x7f090004;
+        public static final int viewPager=0x7f090000;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
         public static final int activity_welcome=0x7f030001;
-        public static final int login=0x7f030002;
+        public static final int car_control=0x7f030002;
+        public static final int car_setting=0x7f030003;
+        public static final int login=0x7f030004;
+        public static final int my_setting=0x7f030005;
+        public static final int system_setting=0x7f030006;
     }
     public static final class menu {
         public static final int login=0x7f080000;
@@ -106,13 +111,18 @@ public final class R {
     public static final class string {
         public static final int action_settings=0x7f060001;
         public static final int app_name=0x7f060000;
+        public static final int car_control=0x7f06000b;
+        public static final int car_setting=0x7f06000c;
         public static final int forget_password=0x7f060006;
         public static final int hello_world=0x7f060002;
         public static final int login=0x7f060005;
         public static final int login_password_hint=0x7f060004;
         public static final int login_username_hint=0x7f060003;
+        public static final int my_setting=0x7f06000e;
         public static final int register=0x7f060007;
+        public static final int sys_setting=0x7f06000d;
         public static final int title_activity_login=0x7f060008;
+        public static final int title_activity_main=0x7f06000a;
         public static final int title_activity_welcome=0x7f060009;
     }
     public static final class style {
