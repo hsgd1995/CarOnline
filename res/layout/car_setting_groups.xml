@@ -4,16 +4,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
     
-<TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/car_setting" />
-
-<ExpandableListView 
-     android:id="@id/android:list"
+ <TextView
+        android:id="@+id/carSetting_groups"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-    
-    
-    ></ExpandableListView>
+        android:paddingLeft="40dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:textSize="25sp"
+        android:text="No data"
+    />
 </LinearLayout>

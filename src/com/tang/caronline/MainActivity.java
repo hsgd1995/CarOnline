@@ -3,7 +3,10 @@ package com.tang.caronline;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.tang.activity.LoginActivity;
+
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -13,6 +16,7 @@ import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.ExpandableListView;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 
@@ -89,6 +93,9 @@ public class MainActivity extends Activity {
 				return view;
 			}
 		});
+		
+		
+		
 	}
 	
 	
@@ -160,6 +167,9 @@ public class MainActivity extends Activity {
 
 				case R.id.car_setting:
 					viewPager.setCurrentItem(1);
+					/*Intent intent = new Intent(MainActivity.this, CarSettingActivity.class);
+					startActivity(intent);
+					finish();*/
 					break;
 
 				case R.id.sys_setting:

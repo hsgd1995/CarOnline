@@ -15,8 +15,8 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.tang.activity.WelcomeActivity"
-            android:theme="@android:style/Theme.NoTitleBar" 
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,12 +25,19 @@
         </activity>
         <activity
             android:name="com.tang.activity.LoginActivity"
-            android:label="@string/title_activity_login"
-            >
+            android:label="@string/title_activity_login" >
         </activity>
         <activity
             android:name="com.tang.caronline.MainActivity"
             android:label="@string/title_activity_main" >
+        </activity>
+        <activity
+            android:name="com.tang.caronline.CarSettingActivity"
+            android:label="@string/title_activity_car_setting"
+            android:parentActivityName="android.app.ExpandableListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.app.ExpandableListActivity" />
         </activity>
     </application>
 
