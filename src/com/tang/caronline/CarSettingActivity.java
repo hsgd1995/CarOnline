@@ -22,6 +22,7 @@ import android.widget.Toast;
 public class CarSettingActivity extends ExpandableListActivity {
 	
 	private View CView;
+	SimpleExpandableListAdapter sela;
 	 /**
      * 创建一级条目容器
      */
@@ -33,10 +34,10 @@ public class CarSettingActivity extends ExpandableListActivity {
     @Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.car_setting);
+		//setContentView(R.layout.car_setting);
 		setListData();
 	}
-
+    
 
 	/**
      * 设置列表内容
@@ -85,12 +86,12 @@ public class CarSettingActivity extends ExpandableListActivity {
          * 5.一级显示控件名 6. 二级集合 7. 二级样式 8.二级条目键值 9.二级显示控件名
          * 
          */
-        SimpleExpandableListAdapter sela = new SimpleExpandableListAdapter(
+         sela = new SimpleExpandableListAdapter(
                 this, gruops, R.layout.car_setting_groups, new String[] { "group" },
                 new int[] { R.id.carSetting_groups }, childs, R.layout.car_setting_childs,
                 new String[] { "child" }, new int[] { R.id.carSetting_childs });
         // 加入列表
-        setListAdapter(sela);
+        //setListAdapter(sela);
     }
  
     /**
@@ -122,24 +123,17 @@ public class CarSettingActivity extends ExpandableListActivity {
         super.setSelectedGroup(groupPosition);
     }
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+	public SimpleExpandableListAdapter getSela() {
+		return sela;
+	}
+
+
+	public void setSela(SimpleExpandableListAdapter sela) {
+		this.sela = sela;
+	}
+
+
 	/**
 	 * Set up the {@link android.app.ActionBar}, if the API is available.
 	 */

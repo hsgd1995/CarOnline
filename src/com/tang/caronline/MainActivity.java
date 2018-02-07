@@ -1,7 +1,9 @@
 package com.tang.caronline;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import com.tang.activity.LoginActivity;
 
@@ -19,11 +21,21 @@ import android.view.Window;
 import android.widget.ExpandableListView;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
+import android.widget.SimpleExpandableListAdapter;
 
 public class MainActivity extends Activity {
 	private ViewPager viewPager;
 	private RadioGroup radioGroup;
 	private List<View> viewList;
+	ExpandableListView ex;
+	/**
+     * 创建一级条目容器
+     */
+    List<Map<String, String>> gruops = new ArrayList<Map<String, String>>();
+    /**
+     * 存放内容, 以便显示在列表中
+     */
+    List<List<Map<String, String>>> childs = new ArrayList<List<Map<String, String>>>();
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -31,6 +43,7 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		
 		initView();
+		setListData();
 		initData();
 		initEvent();
 	}
@@ -94,11 +107,81 @@ public class MainActivity extends Activity {
 			}
 		});
 		
+		ex = (ExpandableListView) carSetting.findViewById(R.id.el_carS);
 		
-		
+		ex.setAdapter(new SimpleExpandableListAdapter(
+                this, gruops, R.layout.car_setting_groups, new String[] { "group" },
+                new int[] { R.id.carSetting_groups }, childs, R.layout.car_setting_childs,
+                new String[] { "child" }, new int[] { R.id.carSetting_childs }) );
 	}
 	
-	
+	/**
+     * 设置列表内容
+     */
+    public void setListData() {
+        // 创建二个一级条目标题
+        Map<String, String> title_1 = new HashMap<String, String>();
+        Map<String, String> title_2 = new HashMap<String, String>();
+        Map<String, String> title_3 = new HashMap<String, String>();
+        title_1.put("group", "text1");
+        title_2.put("group", "text2");
+        title_3.put("group", "text3");
+        gruops.add(title_1);
+        gruops.add(title_2);
+        gruops.add(title_3);
+ 
+        // 创建二级条目内容
+        // 内容一
+        Map<String, String> title_1_content_1 = new HashMap<String, String>();
+        Map<String, String> title_1_content_2 = new HashMap<String, String>();
+        Map<String, String> title_1_content_3 = new HashMap<String, String>();
+        title_1_content_1.put("child", "测试1_1");
+        title_1_content_2.put("child", "测试1_2");
+        title_1_content_3.put("child", "测试1_3");
+ 
+        List<Map<String, String>> childs_1 = new ArrayList<Map<String, String>>();
+        childs_1.add(title_1_content_1);
+        childs_1.add(title_1_content_2);
+        childs_1.add(title_1_content_3);
+ 
+        // 内容二
+        Map<String, String> title_2_content_1 = new HashMap<String, String>();
+        Map<String, String> title_2_content_2 = new HashMap<String, String>();
+        Map<String, String> title_2_content_3 = new HashMap<String, String>();
+        title_2_content_1.put("child", "测试2_1");
+        title_2_content_2.put("child", "测试2_2");
+        title_2_content_3.put("child", "测试2_3");
+        List<Map<String, String>> childs_2 = new ArrayList<Map<String, String>>();
+        childs_2.add(title_2_content_1);
+        childs_2.add(title_2_content_2);
+        childs_2.add(title_2_content_3);
+     // 内容三
+        Map<String, String> title_3_content_1 = new HashMap<String, String>();
+        Map<String, String> title_3_content_2 = new HashMap<String, String>();
+        Map<String, String> title_3_content_3 = new HashMap<String, String>();
+        title_3_content_1.put("child", "测试3_1");
+        title_3_content_2.put("child", "测试3_2");
+        title_3_content_3.put("child", "测试3_3");
+        List<Map<String, String>> childs_3 = new ArrayList<Map<String, String>>();
+        childs_3.add(title_3_content_1);
+        childs_3.add(title_3_content_2);
+        childs_3.add(title_3_content_3);
+ 
+        childs.add(childs_1);
+        childs.add(childs_2);
+        childs.add(childs_3);
+        /**
+         * 创建ExpandableList的Adapter容器 参数: 1.上下文 2.一级集合 3.一级样式文件 4. 一级条目键值
+         * 5.一级显示控件名 6. 二级集合 7. 二级样式 8.二级条目键值 9.二级显示控件名
+         * 
+         */
+         /*sela = new SimpleExpandableListAdapter(
+                this, gruops, R.layout.car_setting_groups, new String[] { "group" },
+                new int[] { R.id.carSetting_groups }, childs, R.layout.car_setting_childs,
+                new String[] { "child" }, new int[] { R.id.carSetting_childs });*/
+        // 加入列表
+        //setListAdapter(sela);
+    }
 	
 	/**
 	 * 

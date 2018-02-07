@@ -14,7 +14,7 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="car_control">车辆监控</string>
     <string name="car_setting">车辆管理</string>
-    <string name="sys_setting">系统设置</string>
+    <string name="sys_setting">系统管理</string>
     <string name="my_setting">我的</string>
     <string name="title_activity_car_setting">CarSettingActivity</string>
 

@@ -10,7 +10,7 @@
         android:text="@string/car_setting" />
 
 <ExpandableListView 
-     android:id="@id/android:list"
+     android:id="@+id/el_carS"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
     
