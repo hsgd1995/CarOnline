@@ -80,23 +80,26 @@ public final class R {
         public static final int welcome5=0x7f020017;
     }
     public static final class id {
-        public static final int action_settings=0x7f090012;
+        public static final int action_settings=0x7f090015;
         public static final int carSetting_childs=0x7f090007;
         public static final int carSetting_groups=0x7f090008;
         public static final int car_control=0x7f090002;
         public static final int car_setting=0x7f090003;
         public static final int el_carS=0x7f090006;
-        public static final int el_sysSetting=0x7f090011;
+        public static final int el_myS=0x7f09000f;
+        public static final int el_sysSetting=0x7f090014;
         public static final int ll_user_info=0x7f09000b;
         public static final int login=0x7f09000e;
         public static final int login_picture=0x7f090009;
         public static final int loginname=0x7f09000c;
+        public static final int mySetting_childs=0x7f090010;
+        public static final int mySetting_groups=0x7f090011;
         public static final int my_setting=0x7f090005;
         public static final int password=0x7f09000d;
         public static final int radioGroup=0x7f090001;
         public static final int rl_user=0x7f09000a;
-        public static final int sysSetting_childs=0x7f09000f;
-        public static final int sysSetting_groups=0x7f090010;
+        public static final int sysSetting_childs=0x7f090012;
+        public static final int sysSetting_groups=0x7f090013;
         public static final int sys_setting=0x7f090004;
         public static final int viewPager=0x7f090000;
     }
@@ -109,9 +112,11 @@ public final class R {
         public static final int car_setting_groups=0x7f030005;
         public static final int login=0x7f030006;
         public static final int my_setting=0x7f030007;
-        public static final int sys_setting_childs=0x7f030008;
-        public static final int sys_setting_groups=0x7f030009;
-        public static final int system_setting=0x7f03000a;
+        public static final int my_setting_childs=0x7f030008;
+        public static final int my_setting_groups=0x7f030009;
+        public static final int sys_setting_childs=0x7f03000a;
+        public static final int sys_setting_groups=0x7f03000b;
+        public static final int system_setting=0x7f03000c;
     }
     public static final class menu {
         public static final int car_setting=0x7f080000;

@@ -27,8 +27,9 @@ public class MainActivity extends Activity {
 	private ViewPager viewPager;
 	private RadioGroup radioGroup;
 	private List<View> viewList;
-	ExpandableListView ex;
+	ExpandableListView elCarSetting;
 	ExpandableListView elSysSetting;
+	ExpandableListView elMySetting;
 	/**
      * 创建车辆管理一级条目容器
      */
@@ -46,6 +47,14 @@ public class MainActivity extends Activity {
      * 系统管理：存放二级条目
      */
     List<List<Map<String,String>>> sysSettingChilds = new ArrayList<List<Map<String,String>>>();
+    /**
+     * 创建我的管理一级条目容器
+     */
+    List<Map<String,String>> mySettingGroups = new ArrayList<Map<String,String>>();
+    /**
+     * 我的管理：存放二级条目
+     */
+    List<List<Map<String,String>>> mySettingChilds = new ArrayList<List<Map<String,String>>>();
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -55,6 +64,7 @@ public class MainActivity extends Activity {
 		initView();
 		setCarSettingListData();
 		setSysSettingListData();
+		setMySettingListData();
 		initData();
 		initEvent();
 	}
@@ -118,9 +128,8 @@ public class MainActivity extends Activity {
 			}
 		});
 		
-		ex = (ExpandableListView) carSetting.findViewById(R.id.el_carS);
-		
-		ex.setAdapter(new SimpleExpandableListAdapter(
+		elCarSetting = (ExpandableListView) carSetting.findViewById(R.id.el_carS);
+		elCarSetting.setAdapter(new SimpleExpandableListAdapter(
                 this, carSettingGroups, R.layout.car_setting_groups, new String[] { "group" },
                 new int[] { R.id.carSetting_groups }, carSettingchilds, R.layout.car_setting_childs,
                 new String[] { "child" }, new int[] { R.id.carSetting_childs }) );
@@ -130,6 +139,12 @@ public class MainActivity extends Activity {
 				this, sysSettingGroups, R.layout.sys_setting_groups, new String[] {"group"}, 
 				new int[]{R.id.sysSetting_groups}, sysSettingChilds, R.layout.sys_setting_childs,
 				new String[]{"child"}, new int[]{R.id.sysSetting_childs}));
+		
+		elMySetting = (ExpandableListView) mySetting.findViewById(R.id.el_myS);
+		elMySetting.setAdapter(new SimpleExpandableListAdapter(
+				this, mySettingGroups, R.layout.my_setting_groups, new String[] {"group"},
+				new int[]{R.id.mySetting_groups}, mySettingChilds, R.layout.my_setting_childs,
+				new String[] {"child"}, new int[]{R.id.mySetting_childs}));
 		
 	}
 	
@@ -359,6 +374,32 @@ public class MainActivity extends Activity {
     	
     	sysSettingChilds.add(childs_1);
     	sysSettingChilds.add(childs_2);
+    }
+    /**
+     * 设置我的管理列表内容
+     */
+    public void setMySettingListData(){
+    	Map<String, String> title_1 = new HashMap<String, String>();
+    	Map<String, String> title_2 = new HashMap<String, String>();
+    	title_1.put("group", "我的");
+    	title_2.put("group", "系统");
+    	mySettingGroups.add(title_1);
+    	mySettingGroups.add(title_2);
+    	
+    	Map<String, String> title_1_content_1 = new HashMap<String, String>();
+    	title_1_content_1.put("child", "修改信息");
+    	List<Map<String, String>> childs_1 = new ArrayList<Map<String,String>>();
+    	childs_1.add(title_1_content_1);
+    	
+    	Map<String, String> title_2_content_1 = new HashMap<String, String>();
+    	title_2_content_1.put("child", "退出系统");
+    	List<Map<String, String>> childs_2 = new ArrayList<Map<String,String>>();
+    	childs_2.add(title_2_content_1);
+    	
+    	mySettingChilds.add(childs_1);
+    	mySettingChilds.add(childs_2);
+    	
+    	
     }
 	/**
 	 * 
