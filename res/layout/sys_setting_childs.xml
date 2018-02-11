@@ -5,13 +5,13 @@
     android:layout_height="fill_parent"
 >
 　　  <TextView
-        android:id="@+id/carSetting_childs"
+        android:id="@+id/sysSetting_childs"
    		android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:paddingLeft="60dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
         android:textSize="20sp"
-  		android:text="No Data"/>
+   		android:text="No Data"/>
 
 </LinearLayout>
