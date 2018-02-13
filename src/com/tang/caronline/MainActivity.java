@@ -5,6 +5,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.baidu.mapapi.SDKInitializer;
+import com.baidu.mapapi.map.BaiduMap;
+import com.baidu.mapapi.map.TextureMapView;
 import com.tang.activity.LoginActivity;
 
 import android.app.Activity;
@@ -30,6 +33,9 @@ public class MainActivity extends Activity {
 	ExpandableListView elCarSetting;
 	ExpandableListView elSysSetting;
 	ExpandableListView elMySetting;
+	
+	private TextureMapView mMapView;
+    private BaiduMap mBaiduMap;
 	/**
      * 创建车辆管理一级条目容器
      */
@@ -59,12 +65,14 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		SDKInitializer.initialize(getApplicationContext()); 
 		setContentView(R.layout.activity_main);
 		
 		initView();
 		setCarSettingListData();
 		setSysSettingListData();
 		setMySettingListData();
+		initMap();
 		initData();
 		initEvent();
 	}
@@ -86,7 +94,12 @@ public class MainActivity extends Activity {
 
 	}
 	
-	
+	public void initMap(){
+		LayoutInflater inflater = LayoutInflater.from(this);
+		View carControl = inflater.inflate(R.layout.car_control, null);
+		mMapView = (TextureMapView) carControl.findViewById(R.id.mTexturemap);
+        mBaiduMap = mMapView.getMap();
+	}
 	/**
 	 * 初始化数据
 	 */
