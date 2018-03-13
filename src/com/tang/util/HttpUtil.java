@@ -40,4 +40,7 @@ public class HttpUtil {
 		HttpClient client = new DefaultHttpClient(httpParams);
 		return client;
 	}
+	public static void main(String[] args) {
+		System.out.println(2);
+	}
 }

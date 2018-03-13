@@ -17,5 +17,23 @@
     <string name="sys_setting">系统管理</string>
     <string name="my_setting">我的</string>
     <string name="title_activity_car_setting">CarSettingActivity</string>
+    <string name="title_activity_car_apply">CarApplyActivity</string>
+    <string name="applyOrg">申请单位</string>
+    <string name="vCarType">拟用车类型</string>
+    <string name="passengerNumber">乘车人数</string>
+    <string name="startTime">开始时间</string>
+    <string name="endTime">结束时间</string>
+    <string name="startPlace">出发地点</string>
+    <string name="endPlace">目的地点</string>
+    <string name="NameOfCarUser">用车人姓名</string>
+    <string name="phoneOfCarUser">用车人电话</string>
+    <string name="NameOfCarApply">填报人姓名</string>
+    <string name="phoneOfCarApply">填报人电话</string>
+    <string name="hint_useCarReason">请输入用车事由</string>
+    <string name="title_activity_driver">DriverActivity</string>
+    <string name="driverList">驾驶员总览</string>
+    <string name="title_activity_apply_car">ApplyCarActivity</string>
+    <string name="title_activity_apply">ApplyActivity</string>
+    <string name="title_activity_car">CarActivity</string>
 
 </resources>

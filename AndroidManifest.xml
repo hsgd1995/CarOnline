@@ -57,9 +57,23 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="android.app.ExpandableListActivity" />
         </activity>
-         <meta-data  
-        android:name="com.baidu.lbsapi.API_KEY"  
-        android:value="mp41UIsNsBWeDgbPpzwaIuX1P2mUmCet" /> 
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="mp41UIsNsBWeDgbPpzwaIuX1P2mUmCet" />
+
+        <activity
+            android:name="com.tang.caronline.DriverActivity"
+            android:label="@string/title_activity_driver" >
+        </activity>
+        <activity
+            android:name="com.tang.caronline.CarApplyActivity"
+            android:label="@string/title_activity_car_apply" >
+        </activity>
+        <activity
+            android:name="com.tang.caronline.CarActivity"
+            android:label="@string/title_activity_car" >
+        </activity>
     </application>
 
 </manifest>

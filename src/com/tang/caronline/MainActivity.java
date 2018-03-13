@@ -5,13 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.baidu.mapapi.SDKInitializer;
-import com.baidu.mapapi.map.BaiduMap;
-import com.baidu.mapapi.map.TextureMapView;
-import com.tang.activity.LoginActivity;
-
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -25,6 +19,14 @@ import android.widget.ExpandableListView;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.SimpleExpandableListAdapter;
+
+import com.baidu.mapapi.SDKInitializer;
+import com.baidu.mapapi.map.BaiduMap;
+import com.baidu.mapapi.map.MapStatus;
+import com.baidu.mapapi.map.MapStatusUpdate;
+import com.baidu.mapapi.map.MapStatusUpdateFactory;
+import com.baidu.mapapi.map.TextureMapView;
+import com.baidu.mapapi.model.LatLng;
 
 public class MainActivity extends Activity {
 	private ViewPager viewPager;
@@ -99,6 +101,15 @@ public class MainActivity extends Activity {
 		View carControl = inflater.inflate(R.layout.car_control, null);
 		mMapView = (TextureMapView) carControl.findViewById(R.id.mTexturemap);
         mBaiduMap = mMapView.getMap();
+        //111.322852,23.503845
+        LatLng cenpt = new LatLng(111.322852,23.503845); //设定中心点坐标 
+
+        //定义地图状态
+        MapStatus mMapStatus = new MapStatus.Builder().target(cenpt).zoom(18).build();  //定义MapStatusUpdate对象，以便描述地图状态将要发生的变化
+
+        MapStatusUpdate mMapStatusUpdate = MapStatusUpdateFactory.newMapStatus(mMapStatus);
+
+        mBaiduMap.setMapStatus(mMapStatusUpdate);//改变地图状态
 	}
 	/**
 	 * 初始化数据
@@ -158,7 +169,7 @@ public class MainActivity extends Activity {
 				this, mySettingGroups, R.layout.my_setting_groups, new String[] {"group"},
 				new int[]{R.id.mySetting_groups}, mySettingChilds, R.layout.my_setting_childs,
 				new String[] {"child"}, new int[]{R.id.mySetting_childs}));
-		
+		//elMySetting.setOnChildClickListener(onChildClickListener)
 	}
 	
 	/**
